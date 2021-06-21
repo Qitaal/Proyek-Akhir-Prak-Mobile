@@ -11,11 +11,11 @@ public class Mp4{
 	@SerializedName("preview")
 	private String preview;
 
-	@SerializedName("dims")
-	private List<Integer> dims;
-
 	@SerializedName("size")
 	private int size;
+
+	@SerializedName("dims")
+	private List<Integer> dims;
 
 	@SerializedName("url")
 	private String url;
@@ -28,12 +28,12 @@ public class Mp4{
 		return preview;
 	}
 
-	public List<Integer> getDims(){
-		return dims;
-	}
-
 	public int getSize(){
 		return size;
+	}
+
+	public List<Integer> getDims(){
+		return dims;
 	}
 
 	public String getUrl(){

@@ -10,14 +10,14 @@ public class MediaItem{
 	@SerializedName("tinygif")
 	private Tinygif tinygif;
 
+	@SerializedName("nanogif")
+	private Nanogif nanogif;
+
 	@SerializedName("tinywebm")
 	private Tinywebm tinywebm;
 
 	@SerializedName("gif")
 	private Gif gif;
-
-	@SerializedName("nanogif")
-	private Nanogif nanogif;
 
 	@SerializedName("mediumgif")
 	private Mediumgif mediumgif;
@@ -45,16 +45,16 @@ public class MediaItem{
 		return tinygif;
 	}
 
+	public Nanogif getNanogif(){
+		return nanogif;
+	}
+
 	public Tinywebm getTinywebm(){
 		return tinywebm;
 	}
 
 	public Gif getGif(){
 		return gif;
-	}
-
-	public Nanogif getNanogif(){
-		return nanogif;
 	}
 
 	public Mediumgif getMediumgif(){

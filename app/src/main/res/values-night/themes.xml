@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="Theme.TenorApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#000000</item>
-        <item name="colorPrimaryVariant">#202020</item>
+        <item name="colorPrimary">#0097A7</item>
+        <item name="colorPrimaryVariant">#0288D1</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">#81D4FA</item>

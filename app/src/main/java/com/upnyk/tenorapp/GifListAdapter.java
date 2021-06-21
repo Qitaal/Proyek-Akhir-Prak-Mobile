@@ -57,7 +57,7 @@ public class GifListAdapter extends RecyclerView.Adapter<GifListAdapter.ViewHold
         public void bind(int position) {
             Glide.with(context)
                     .asGif()
-                    .load(resultsItems.get(position).getMedia().get(0).getGif().getUrl())
+                    .load(resultsItems.get(position).getMedia().get(0).getNanogif().getUrl())
                     .into(imageView);
         }
     }

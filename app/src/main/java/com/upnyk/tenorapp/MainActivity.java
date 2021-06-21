@@ -9,6 +9,7 @@ import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.upnyk.tenorapp.view.home.HomeFragment;
+import com.upnyk.tenorapp.view.search.SearchFragment;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
