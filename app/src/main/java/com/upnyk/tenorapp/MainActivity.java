@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.upnyk.tenorapp.view.favorite.FavoriteFragment;
 import com.upnyk.tenorapp.view.home.HomeFragment;
 import com.upnyk.tenorapp.view.search.SearchFragment;
 
