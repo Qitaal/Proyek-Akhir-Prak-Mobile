@@ -45,7 +45,11 @@ public class HomeFragment extends Fragment {
             gifListAdapter.setResultsItems(resultsItems);
             gifListAdapter.notifyDataSetChanged();
         });
+    }
 
+    @Override
+    public void onResume() {
+        super.onResume();
         homeViewModel.loadTrending();
     }
 }
