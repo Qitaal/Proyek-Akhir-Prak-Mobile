@@ -1,16 +1,19 @@
 package com.upnyk.tenorapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.upnyk.tenorapp.service.model.ResultsItem;
+import com.upnyk.tenorapp.view.detail.DetailGifActivity;
 
 import java.util.List;
 
@@ -58,7 +61,15 @@ public class GifListAdapter extends RecyclerView.Adapter<GifListAdapter.ViewHold
             Glide.with(context)
                     .asGif()
                     .load(resultsItems.get(position).getMedia().get(0).getNanogif().getUrl())
+                    .placeholder(R.drawable.loading)
                     .into(imageView);
+
+            itemView.setOnClickListener(v -> {
+                    Intent intent = new Intent(context, DetailGifActivity.class);
+                    intent.putExtra("EXTRA_ID", resultsItems.get(position).getId());
+                    context.startActivity(intent);
+//                Toast.makeText(context, resultsItems.get(position).getUrl(), Toast.LENGTH_SHORT).show();
+            });
         }
     }
 }

@@ -8,11 +8,11 @@ public class Tinywebm{
 	@SerializedName("preview")
 	private String preview;
 
-	@SerializedName("size")
-	private int size;
-
 	@SerializedName("dims")
 	private List<Integer> dims;
+
+	@SerializedName("size")
+	private int size;
 
 	@SerializedName("url")
 	private String url;
@@ -21,12 +21,12 @@ public class Tinywebm{
 		return preview;
 	}
 
-	public int getSize(){
-		return size;
-	}
-
 	public List<Integer> getDims(){
 		return dims;
+	}
+
+	public int getSize(){
+		return size;
 	}
 
 	public String getUrl(){
