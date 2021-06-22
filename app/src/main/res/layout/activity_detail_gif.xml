@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:clickable="true"
-        app:layout_constraintEnd_toStartOf="@+id/fab_share"
+        app:layout_constraintEnd_toStartOf="@+id/fabBrowse"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_detail"
@@ -37,8 +37,19 @@
         android:clickable="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/fab_favorite"
+        app:layout_constraintStart_toEndOf="@+id/fabBrowse"
         app:layout_constraintTop_toTopOf="@+id/fab_favorite"
         app:srcCompat="@drawable/ic_baseline_share_24" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabBrowse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:layout_constraintEnd_toStartOf="@+id/fab_share"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fab_favorite"
+        app:layout_constraintTop_toTopOf="@+id/fab_favorite"
+        app:srcCompat="@drawable/ic_baseline_browse_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

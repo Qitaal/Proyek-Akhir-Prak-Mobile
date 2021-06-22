@@ -23,7 +23,7 @@ public class DetailGifActivity extends AppCompatActivity {
     private DetailGifViewModel detailGifViewModel;
 
     private ImageView ivDetail;
-    private FloatingActionButton fabShare, fabFavorite;
+    private FloatingActionButton fabShare, fabFavorite, fabBrowse;
     private String id;
 
     @Override
@@ -40,6 +40,7 @@ public class DetailGifActivity extends AppCompatActivity {
         ivDetail = findViewById(R.id.iv_detail);
         fabFavorite = findViewById(R.id.fab_favorite);
         fabShare = findViewById(R.id.fab_share);
+        fabBrowse = findViewById(R.id.fabBrowse);
 
         detailGifViewModel.getResultsItem().observe(this, resultsItems -> {
             Glide.with(DetailGifActivity.this)
@@ -48,11 +49,19 @@ public class DetailGifActivity extends AppCompatActivity {
                     .placeholder(R.drawable.loading)
                     .into(ivDetail);
 
-            fabShare.setOnClickListener(v -> {
+            fabBrowse.setOnClickListener(v -> {
                 Intent intent = new Intent();
                 intent.setAction(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse(resultsItems.get(0).getUrl()));
                 startActivity(intent);
+            });
+
+            fabShare.setOnClickListener(v -> {
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_SEND);
+                intent.setType("text/plain");
+                intent.putExtra(Intent.EXTRA_TEXT, resultsItems.get(0).getMedia().get(0).getGif().getUrl());
+                startActivity(Intent.createChooser(intent, "Share URL"));
             });
         });
 
